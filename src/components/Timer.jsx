@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTimer } from "./hooks";
 
-function Timer({ timerValue }) {
+function Timer({ timerValue, currentTask }) {
   const { minutes, seconds, setTimerStart, timerStart } = useTimer(timerValue);
 
   const handleClick = () => {
