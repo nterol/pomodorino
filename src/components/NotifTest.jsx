@@ -1,28 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 function NotifTest() {
-  const [areNotifAllowed, setAllowNotif] = useState(false);
+    const [areNotifAllowed, setAllowNotif] = useState(false);
 
-  useEffect(() => {
-    if (!areNotifAllowed)
-      Notification.requestPermission().then(
-        result => result === "granted" && setAllowNotif(true)
-      );
-  }, [areNotifAllowed]);
+    useEffect(() => {
+        if (!areNotifAllowed)
+            Notification.requestPermission().then(
+                result => result === 'granted' && setAllowNotif(true)
+            );
+    }, [areNotifAllowed]);
 
-  const handleNotification = () => {
-    new Notification("Hello !");
-  };
+    const handleNotification = () => {
+        new Notification('Hello !');
+    };
 
-  return (
-    <div>
-      {areNotifAllowed ? (
-        <button onClick={handleNotification}>Send me a notification</button>
-      ) : (
-        <span>Notifications are note allowed</span>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            {areNotifAllowed ? (
+                <button onClick={handleNotification}>
+                    Send me a notification
+                </button>
+            ) : (
+                <span>Notifications are not allowed</span>
+            )}
+        </div>
+    );
 }
 
 export default NotifTest;
