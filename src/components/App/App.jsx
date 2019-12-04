@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TaskProvider from '../TaskContext'
+import TaskProvider from '../../context/TaskContext'
 import Timer from '../Timer'
 import TeamManager from '../TeamManager'
 import TaskManager from '../TaskManager/'

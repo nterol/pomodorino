@@ -12,7 +12,7 @@ body {
 
 h1 {
     display: block;
-    font-size: 64px;
+    font-size: 32px;
     font-weight: 700;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -29,5 +29,3 @@ export const AppContainer = styled.div`
     align-content: center;
     height: 100vh;
 `
-
-export default {}

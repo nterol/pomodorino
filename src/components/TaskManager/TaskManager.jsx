@@ -2,15 +2,18 @@ import React, { useState, useEffect, Suspense } from 'react'
 
 import TaskInput from './TaskInput'
 
+import { TaskManagerContainer } from './styles'
+
 const Task = React.lazy(() => import('./Task'))
 
 function TaskManager() {
     const [inputTask, setInputTask] = useState('')
     const [taskList, setTaskList] = useState([])
 
-    useEffect(() => setInputTask(''), [taskList])
-
-    const handleClick = () => setTaskList([...taskList, inputTask])
+    const handleClick = () => {
+        setTaskList([...taskList, inputTask])
+        setInputTask('')
+    }
 
     const handleChange = ({ target: { value } }) => setInputTask(value)
 
@@ -18,7 +21,7 @@ function TaskManager() {
         setTaskList(taskList.filter(task => task !== taskName))
 
     return (
-        <div>
+        <TaskManagerContainer>
             <TaskInput
                 handleChange={handleChange}
                 handleClick={handleClick}
@@ -34,7 +37,7 @@ function TaskManager() {
                         />
                     ))}
             </Suspense>
-        </div>
+        </TaskManagerContainer>
     )
 }
 

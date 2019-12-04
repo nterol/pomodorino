@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { TeamContainer } from './styles'
+import MemberInput from './MemberInput'
 
 function TeamManager() {
     return (
@@ -11,6 +12,7 @@ function TeamManager() {
                     🏈
                 </span>
             </h1>
+            <MemberInput />
         </TeamContainer>
     )
 }
