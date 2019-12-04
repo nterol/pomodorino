@@ -1,6 +1,7 @@
 import React from 'react'
 
 import useTimer from '../hooks/useTimer'
+import { TimerContainer } from './styles'
 
 function Timer({ timerValue }) {
     const { minutes, seconds, setTimerStart, timerStart } = useTimer(timerValue)
@@ -10,7 +11,7 @@ function Timer({ timerValue }) {
     }
 
     return (
-        <div>
+        <TimerContainer>
             <div>
                 <span>{`${minutes} minute${minutes === 1 ? '' : 's'}`}</span>
                 <span>:</span>
@@ -19,7 +20,7 @@ function Timer({ timerValue }) {
             <button onClick={handleClick}>
                 {timerStart ? 'Stop timer' : 'Launch Timer'}
             </button>
-        </div>
+        </TimerContainer>
     )
 }
 export default Timer

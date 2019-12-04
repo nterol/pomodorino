@@ -5,11 +5,12 @@ import Timer from '../Timer'
 import TeamManager from '../TeamManager'
 import TaskManager from '../TaskManager/'
 
-import { AppContainer } from './styles'
+import { AppContainer, GlobaleStyle } from './styles'
 
 function App() {
     return (
         <TaskProvider>
+            <GlobaleStyle />
             <AppContainer>
                 <TeamManager />
                 <Timer timerValue={1500} />

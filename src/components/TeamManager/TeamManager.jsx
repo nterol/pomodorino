@@ -1,10 +1,17 @@
 import React from 'react'
 
+import { TeamContainer } from './styles'
+
 function TeamManager() {
     return (
-        <div>
-            <div>Team manager goes here</div>
-        </div>
+        <TeamContainer>
+            <h1>
+                My Team{' '}
+                <span role="img" aria-label="my team">
+                    🏈
+                </span>
+            </h1>
+        </TeamContainer>
     )
 }
 
